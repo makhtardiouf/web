@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script>
+        function uploadFile(file) {
+            var url = 'upload.php';
+            var xhr = new XMLHttpRequest();
+            var fd = new FormData();
+            xhr.open("POST", url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Every thing ok, file uploaded
+
+                    console.log(xhr.responseText); // handle response.
+                }
+            };
+
+            fd.append("upload_file", file);
+            xhr.send(fd);
+        }
+
+        var uploadfiles = document.querySelector('#fileinput');      
+        uploadfiles.addEventListener('change', function () {            
+            var files = this.files;
+            for (var i = 0; i < files.length; i++) {
+                uploadFile(this.files[i]); // call the function to upload the file
+            }
+        }, false);
+
+
+    </script>
+    <title>File upload</title>
+</head>
+<body>
+
+    <h2>Upload file:</h2>
+    <form method="post" action="upload.php">
+        <input type="file" id="fileinput" />
+        <input type="button" name="Process" value="Process" />
+    </form>
+</body>
+</html>

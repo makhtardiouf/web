@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "db-walmart": {
+    "url": "mysql://localhost:3306/db-walmart",
+    "name": "db-walmart",
+      "connector": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "database": "db-walmart",
+      "username": "makhtar",
+      "password": "MAKlib"
+  }
+}

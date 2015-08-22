@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var div = $("div");
+                function chgBg() {
+                    div.css("background", "#000");
+                }
+                $("button").click(function () {
+
+                    div.animate({height: '300px', opacity: '0.4'}, "slow");
+                    div.animate({width: '300px', opacity: '0.8'}, "slow");
+                    div.animate({height: '100px', opacity: '0.4'}, "slow");
+                    div.animate({width: '100px', opacity: '0.8'}, "slow");
+                    // Seems to be called simultaneously as the above
+
+                });
+
+                $("#title").slideToggle(2000)
+                        .slideDown(2000);
+            });
+        </script> 
+    </head>
+    <body>
+
+        <h3 id="title" style="display: none;">I am the title yow</h3>
+
+        <button>Start Animation</button>
+
+        <p>By default, all HTML elements have a static position, and cannot be moved. 
+            To manipulate the position, remember to first set the CSS position property of 
+            the element to relative, fixed, or absolute!</p>
+
+        <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+    </body>
+</html>

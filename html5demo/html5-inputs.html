@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html manifest="cache.appcache">
+    <head>
+        <link type="text/css" rel="stylesheet" href="demo.css" />
+        <script type="text/javascript" src="js/demo.js"></script>
+
+        <title>Hello HTML5 World</title>
+    </head>
+
+    <body>
+        <header>
+            <hgroup>
+                <h1>Test</h1>
+                <h2>Page subtitle</h2>
+            </hgroup>
+        </header>
+
+        <p>
+        <h3 id="inputs">New input types:</h3>
+        <b>Select your type of car</b>:
+        <p>
+            <input list="cars" />  
+            <input type="search" results="10" placeholder="Search..." />
+        </p>
+
+        <datalist id="cars">
+            <option value="BMW" />
+            <option value="Ford" />
+            <option value="Volvo" />
+            <option value="Rolls roice" />
+        </datalist>
+        <br />
+
+        <form name="data" target="_blank">
+            <p>Encryption: <keygen name="security"> </p>
+
+            <fieldset title="Wows you">
+                <caption>Wows you?</caption>
+                <p>            
+                    <input type="text" placeholder="Objective in life" required />
+
+                    <input type="email" placeholder="youremail@somewhere.com" required/>
+
+                    <input type="date" min="2010-08-14" max="2011-08-14" value="2010-08-14"/>
+
+                    <input type="range" min="0" max="50" value="10" />
+
+                </p>
+            </fieldset>
+            <p>
+                <input type="tel" placeholder="+1 12-3333-4444"
+                       pattern="^\(?[+]\d{3}\)?[-\s]\d{4}[-\s]\d{4}.*?$" 
+                       title="Phone number with country code"/>
+
+                <input type="color" placeholder="#bbbbbb" />
+
+                <input type="number" step="1" min="-5" max="10" value="0" />
+                </p>
+                
+                <p>
+                <input type="time" />
+                Select images: <input type="file" name="img" multiple>
+
+            </p>
+            <input type="reset" value="Clear all"/>  <input type="submit" value="Submit opening a new page"/>
+            <input type="image" src="html5.gif" alt="Submit" width="64" height="64" />
+
+        </form>
+
+
+        <h2>Horizontal menu</h2>
+
+        <ul id="menu">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>PHP</li>
+        </ul> 
+        <nav>
+            <ol type="A">
+                <li><a href="#inputs">Inputs</a></li>
+                <li><a href="#t01">Tables</a></li>
+            </ol>
+            <ul style="list-style:square">
+                <li>Test1</li>
+                <li>Test2</li>
+            </ul>
+        </nav>
+
+        <p>
+        <details>
+            <summary>HTML 5</summary>
+            This slide deck teaches you everything you need to know about HTML 5.
+        </details>
+    </p>
+
+    <p>
+    <ul id="tree1"
+        role="tree"
+        tabindex="0"
+        aria-labelledby="label_1">
+        <li role="treeitem" tabindex="-1" aria-expanded="true">Fruits</li>
+        <li role="group">
+            <ul>
+                <li role="treeitem" tabindex="-1">Oranges</li>
+                <li role="treeitem" tabindex="-1">Pineapples</li>
+                ...
+            </ul>
+        </li>
+    </ul>
+</p>
+
+
+<p>
+    Let's make continuous progress
+    <progress>working...</progress>
+</p>
+
+
+<h3 id="t01">Tables:</h3>
+<table>
+    <caption>Daily savings</caption>
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>Makhtar Di</td>
+        <td>Doe</td>
+        <td>80</td>
+    </tr>
+</table>
+
+<h2>A Description List</h2>
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+<h1>An <span style="color:red">Important</span> Heading</h1>
+
+<div class="cities">
+    <h2>London</h2>
+    <p>
+        London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.
+    </p>
+</div> 
+
+<footer>
+    Copyright &copy;
+    <time datetime="2014-05-31">Makhtar Diouf 2014</time>.
+</footer>
+
+</body>
+
+
+
+</html>

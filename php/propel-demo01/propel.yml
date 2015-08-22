@@ -1,0 +1,10 @@
+propel:
+    database:
+        connections:
+            default:
+                adapter: sqlite
+                dsn: sqlite:
+                user: makhtar
+                password: MAKlib
+                settings:
+                    charset: utf8

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+    <head data-gwd-animation-mode="quickMode">
+        <title>Demo Javascript access to style elements</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="generator" content="Google Web Designer 1.3.2.0521">
+        <!-- Test refresh -->
+        <meta http-equiv="refresh" content="20">
+        <script src="js/jsdemo.js"></script>
+        <style type="text/css">
+            html, body {
+                width: 70%;
+                
+                margin: 50px;
+            }
+            body {
+                -webkit-transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+                -webkit-transform-style: preserve-3d;
+                background-color: transparent;
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Getting into JavaScript</h1>
+
+        <script>
+            console.log("Starting page load on: " + Date());
+        </script>
+
+        <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+        <button type="button" onclick="myFunc()">Click Me!</button>
+
+        <h1>Can Change Images</h1>
+
+        <img id="light" onclick="chgImage()" src="img/pic_bulboff.gif" width="100" height="180">
+
+        <p>Click the light bulb to turn on/off the light.</p>
+
+        <p>
+            &copy; 2015 <a href="http://www.softensys.com" target="_blank">SoftenSys Ltd</a>- Makhtar Diouf
+            <br /><script> document.write(Date().getFullYear());</script>
+        </p>
+
+        <script>
+            document.write(5 + 6);
+        </script>
+
+    </body>
+
+</html>

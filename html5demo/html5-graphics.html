@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>HTML5 graphics</title>
+    <style>
+        <!--  Test image sizes -->
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Using style to specify image size prevents css from changing the original size 
+        "border:0;" prevents IE9 (and earlier) from displaying a border around the image
+        -->
+    <p>
+    <img src="html5.gif" alt="HTML5 Icon" style="float:right;width:128px;height:128px;border:0;">
+    The image will float to the right of the text.
+    </p>
+    <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+
+    <div>
+        <canvas id="canvas" width="838" height="220"></canvas>
+
+        <script>
+            var canvasContext = document.getElementById("canvas").getContext("2d");
+            canvasContext.fillRect(250, 25, 150, 100);
+
+            canvasContext.beginPath();
+            canvasContext.arc(450, 110, 100, Math.PI * 1 / 2, Math.PI * 3 / 2);
+            canvasContext.lineWidth = 5;
+            canvasContext.lineCap = 'round';
+            canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+            canvasContext.stroke();
+        </script>
+    </div>
+
+
+    <div>
+        <svg width="300px" height="300px">
+            <defs>
+                <linearGradient id="myGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="5%" stop-color="red"></stop>
+                    <stop offset="95%" stop-color="blue" stop-opacity="0.5"></stop>
+                </linearGradient>
+            </defs>
+            <circle id="myCircle" class="important" cx="50%" cy="50%" r="100"
+                    fill="url(#myGradient)" onmousedown="alert('hello');" />
+        </svg>
+    </div>
+
+
+</body>
+</html>
