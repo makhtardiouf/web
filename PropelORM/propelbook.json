@@ -1,0 +1,21 @@
+{"Id":7,"FirstName":"Jane6","LastName":"Diouf"}{"Id":8,"FirstName":"Jane10","LastName":"Diouf"}{"Id":9,"FirstName":"Jane10","LastName":"Diouf"}
+{"Id":8,"Name":"SoftenSys10"}
+{"Id":9,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"ae063d2b34af6c59937d01f955250bff","PublisherId":8,"AuthorId":9,"Publisher":{"Id":8,"Name":"SoftenSys10","Books":["*RECURSION*"]},"Author":{"Id":9,"FirstName":"Jane10","LastName":"Diouf","Books":["*RECURSION*"]}}
+{"Id":10,"FirstName":"Jane2","LastName":"Diouf"}
+{"Id":9,"Name":"SoftenSys4"}
+{"Id":10,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"3ec9040c8a5be770a031930e6c5762cc","PublisherId":9,"AuthorId":10,"Publisher":{"Id":9,"Name":"SoftenSys4","Books":["*RECURSION*"]},"Author":{"Id":10,"FirstName":"Jane2","LastName":"Diouf","Books":["*RECURSION*"]}}
+{"Id":11,"FirstName":"Jane1","LastName":"Diouf"}
+{"Id":10,"Name":"SoftenSys5"}
+{"Id":11,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"7f038bb3754e411ecf174cad16f59b18","PublisherId":10,"AuthorId":11,"Publisher":{"Id":10,"Name":"SoftenSys5","Books":["*RECURSION*"]},"Author":{"Id":11,"FirstName":"Jane1","LastName":"Diouf","Books":["*RECURSION*"]}}
+{"Id":12,"FirstName":"Jane8","LastName":"Diouf"}
+{"Id":11,"Name":"SoftenSys2"}
+{"Id":12,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"22d040d36e9c67426586a46d0e92145c","PublisherId":11,"AuthorId":12,"Publisher":{"Id":11,"Name":"SoftenSys2","Books":["*RECURSION*"]},"Author":{"Id":12,"FirstName":"Jane8","LastName":"Diouf","Books":["*RECURSION*"]}}
+{"Id":13,"FirstName":"Jane1","LastName":"Diouf"}
+{"Id":12,"Name":"SoftenSys3"}
+{"Id":13,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"194d301b0f989eab8d0fea2df1e56b6c","PublisherId":12,"AuthorId":13,"Publisher":{"Id":12,"Name":"SoftenSys3","Books":["*RECURSION*"]},"Author":{"Id":13,"FirstName":"Jane1","LastName":"Diouf","Books":["*RECURSION*"]}}
+{"Id":14,"FirstName":"Jane10","LastName":"Diouf"}
+{"Id":13,"Name":"SoftenSys10"}
+{"Id":14,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"6ae0b62962210863eeaa976231984c49","PublisherId":13,"AuthorId":14,"Publisher":{"Id":13,"Name":"SoftenSys10","Books":["*RECURSION*"]},"Author":{"Id":14,"FirstName":"Jane10","LastName":"Diouf","Books":["*RECURSION*"]}}
+{"Id":15,"FirstName":"Jane10","LastName":"Diouf"}
+{"Id":14,"Name":"SoftenSys2"}
+{"Id":15,"Title":"The beginning of Makhtar's come back, inchaAllah","ISBN":"df9802609bc072dd1f4fdd66d7deb788","PublisherId":14,"AuthorId":15,"Publisher":{"Id":14,"Name":"SoftenSys2","Books":["*RECURSION*"]},"Author":{"Id":15,"FirstName":"Jane10","LastName":"Diouf","Books":["*RECURSION*"]}}
