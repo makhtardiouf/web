@@ -1,0 +1,26 @@
+{
+  "name": "store",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "list_opendate": {
+      "type": "date",
+      "required": true
+    },
+    "list_latitude": {
+      "type": "string",
+      "required": true
+    },
+    "list_longitude": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
