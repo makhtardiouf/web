@@ -1,0 +1,92 @@
+
+@font-face {
+    font-family: hagin;
+    src: url('../FONTS/hagin/Hagin Caps Thin.otf');
+}
+
+
+﻿body {
+    /*background-image: url('html5.gif')*/
+    /* from NY times cc */
+    margin:10px;
+    padding:5px;
+    font-family:hagin,georgia,"times new roman",times,serif;
+    color:#333;
+    background-color:#fff
+}
+
+.story-body-text{font-size:16px;font-size:1rem;line-height:23px;line-height:1.4375rem;font-weight:400;font-family:georgia,"times new roman",times,serif}
+
+input {
+    width: 200px;
+}
+fieldset {
+    width: 50%;
+}
+/* match table with id menu */
+ul#menu {
+    padding: 0;
+}
+
+ul#menu li {
+        display: inline;
+}
+
+ ul#menu li a {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px 4px 0 0;
+ }
+
+ ul#menu li a:hover {
+                background-color: orange;
+ }
+
+ /* class example */
+.cities {
+    background-color:black;
+    color:white;
+    margin:20px;
+    padding:20px;
+} 
+
+
+table, th, td {
+    font-family: georgia;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    
+}
+
+/* match table with id t01 */
+    table#t01 {
+        width: 80%;
+        background-color: #f1f1c1;
+    }
+
+        table#t01 tr:nth-child(even) {
+            background-color: #ff6a00;
+        }
+
+        table#t01 tr:nth-child(odd) {
+            background-color: #e88;
+        }
+
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+
+
+[required] {
+    border-color: #88a;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 255, .5);
+}
+
+:invalid {
+    border-color: #e88;
+    -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+}

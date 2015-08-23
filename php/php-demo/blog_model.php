@@ -2,7 +2,7 @@
 // MVC: model.php
 function connectDb()
 {
-    $link = mysql_connect('localhost', 'root', 'MAKlib');
+    $link = mysql_connect('localhost', 'makhtar', 'MAKlib');
     mysql_select_db('wordpress', $link);
 
     return $link;
