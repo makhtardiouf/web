@@ -10,6 +10,7 @@ var crypto = require('crypto');
 var fs = require('fs');
 var zlib = require('zlib');
 
+// Get current filename
 var argv0 = require('path').basename(__filename);
 fs.symlink(argv0, "Testfs-" + argv0, function () {
     console.log("symlinked " + argv0);
@@ -23,7 +24,7 @@ var password = new Buffer(process.env.PASS || 'password');
 var encryptStream = crypto.createCipher('aes-256-cbc', password);
 
 var gzip = zlib.createGzip();
-var readStream = fs.createReadStream(argv0); // current file
+var readStream = fs.createReadStream(argv0);
 var writeStream = fs.createWriteStream(__dirname + '/' + argv0 + '_out.gz');
 
 readStream // reads current file
