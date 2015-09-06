@@ -8,7 +8,8 @@ class Kernel extends HttpKernel
 {
     /**
      * The application's global HTTP middleware stack.
-     *
+     * If you want a middleware to be run during every HTTP request to your application, 
+     * simply list the middleware class in the $middleware property
      * @var array
      */
     protected $middleware = [
@@ -29,5 +30,6 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'testme' => \App\Http\Middleware\TestmeMiddleware::class,
     ];
 }

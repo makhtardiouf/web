@@ -1,30 +1,34 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
+  |--------------------------------------------------------------------------
+  | Application Routes
+  |--------------------------------------------------------------------------
+  |
+  | Here is where you can register all of the routes for an application.
+  | It's a breeze. Simply tell Laravel the URIs it should respond to
+  | and give it the controller to call when that URI is requested.
  *  See http://laravel.com/docs/5.1/routing
-| $Id$
-*/
+  | $Id$
+ */
 
 Route::get('/', function () {
-    return view('Hello World');
+    return view('welcome');
 });
 
-Route::get('users', function()
-{
-   $users = User::all();
+Route::get('tesme',  ['middleware' => 'testme', function() {
+
+    echo "Testing then...";
+}]);
+
+Route::get('users', function() {
+    $users = User::all();
 
     return View::make('users')->with('users', $users);
 });
 
 Route::get('user/{id}', function ($id) {
-    return 'User '.$id;
+    return 'User ' . $id;
 });
 
 // Default user

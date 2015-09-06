@@ -41,6 +41,12 @@
                 <div class="title">Laravel 5</div>
                 
                 <div class="quote">{{ Inspiring::quote() }}</div>
+                <?php
+                use App\Http\Requests\Request as Request;
+                // Request req = new Illuminate\Http\Request();
+               // echo "Client IP is: " . Request::;
+
+                ?>
             </div>
         </div>
     </body>
