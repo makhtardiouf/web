@@ -10,11 +10,20 @@
   | and give it the controller to call when that URI is requested.
  *  See http://laravel.com/docs/5.1/routing
   | $Id$
+ * use Closure to handle "routing" in small applications; 
+ * and Controllers in large applications
  */
 
+Route::get('/', 'PagesController@home');
+// or with closure
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
 
 Route::get('tesme',  ['middleware' => 'testme', function() {
 
