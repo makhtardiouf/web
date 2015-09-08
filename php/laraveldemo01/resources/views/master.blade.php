@@ -1,35 +1,32 @@
-<!DOCTYPE html>
-<!-- Makhtar Diouf $Id$ -->
+<!Doctype html>
 <html>
-    <head>
+    <head>       
         <title> @yield('title') </title>
-       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
         <!-- Bootstrap material design -->
-        <link href="/css/roboto.min.css" rel="stylesheet">
-        <link href="/css/material.min.css" rel="stylesheet">
-        <link href="/css/ripples.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('/css/roboto.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/material.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/ripples.min.css') }}">
+         <script src="{{ asset('js/jquery-1.10.2.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+        <script src="{{ asset('js/ripples.min.js') }}"></script>
+        <script src="{{ asset('js/material.min.js') }}"></script>
+        <script>
+            $(document).ready(function () {
+                // This command is used to initialize some elements
+                $.material.init();
+            });
+        </script>
     </head>
     <body>
         <div class="container">
-
-            <h1> @yield('title')</h1>
-
             @include('navbar')
 
-            @yield('content')
+            <h3> @yield('title')</h3>
 
-            <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-            <script src="/js/ripples.min.js"></script>
-            <script src="/js/material.min.js"></script>
-            <script>
-                $(document).ready(function () {
-                    // This command is used to initialize some elements and make them work properly
-                    $.material.init();
-                });
-            </script>
-
+            @yield('content')          
         </div>
+       
     </body>
 </html>

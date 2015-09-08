@@ -41,7 +41,7 @@ Route::get('user/{id}', function ($id) {
 });
 
 // Default user
-Route::get('user/{name?}', function ($name = 'demo') {
+Route::get('user/{name?}', function ($name = 'demo user') {
     return $name;
 });
 

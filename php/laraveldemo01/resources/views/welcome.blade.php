@@ -1,13 +1,13 @@
 @extends('master')
-@section('title', 'Home')
+@section('title', 'Welcome to Laravel')
 
 @section('content')
 <div class="content">
-    <div class="title">Welcome to my Laravel demo app</div>
+    <p>This is a Laravel demo app</p>
     
 </div>
 
-<div>
+<p>
 <blockquote>{{ Inspiring::quote() }}</blockquote>
-</div>
+</p>
 @endsection
