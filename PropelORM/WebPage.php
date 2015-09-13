@@ -1,7 +1,7 @@
 <?php
 /**
  * Author: Makhtar Diouf <makhtar.diouf@gmail.com>
- * $Id: WebPage.php, dabcbdbb1ca2  makhtar $
+ * $Id$
  * Main entry-point; required by all files; handles autoloading too
  */
 require_once 'vendor/autoload.php';

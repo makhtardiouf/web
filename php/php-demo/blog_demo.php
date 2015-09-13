@@ -1,6 +1,6 @@
 <?php
 // List posts from a wordpress DB: the none MVC way
-// $Id: blog_demo.php, 76a7151784cd  makhtar $
+// $Id$
 
 $link = mysql_connect('localhost', 'makhtar', 'MAKlib');
 mysql_select_db('wordpress', $link);
