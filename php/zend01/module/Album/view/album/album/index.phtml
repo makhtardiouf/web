@@ -13,6 +13,7 @@ $this->headTitle($title);
         <th>Artist</th>
         <th>&nbsp;</th>
     </tr>
+    <!-- $albums was assigned from the controller action -->
     <?php foreach ($albums as $album) : ?>
         <tr>
             <td><?php echo $this->escapeHtml($album->title); ?></td>

@@ -1,0 +1,38 @@
+<?php
+// module/Album/view/album/album/add.phtml:
+
+$title = 'Add new album';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<?php
+$form->setAttribute('action', $this->url('album', array('action' => 'add')));
+$form->prepare();
+// Could use the following shorter way
+/*
+  echo $this->form()->openTag($form);
+  echo $this->formCollection($form);
+  echo $this->form()->closeTag();
+ */
+?>
+
+
+<div class="jumbotron">
+    <?php
+    echo $this->form()->openTag($form);
+    echo $this->formHidden($form->get('id'));
+    ?>
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <?php echo $this->formRow($form->get('title')); ?>
+    </div>
+    <div class="form-group">
+        <label>Artist:</label>
+        <?php echo $this->formRow($form->get('artist')); ?>
+    </div>
+
+    <?php
+    echo $this->formSubmit($form->get('submit'));
+    echo $this->form()->closeTag();
+    ?>
+</div>
