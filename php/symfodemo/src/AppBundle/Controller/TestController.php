@@ -4,6 +4,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -27,23 +28,49 @@ class TestController extends Controller {
             $session->set('userIp', $request->getClientIp());
         else
             $resp .= "<br>Your IP from session info: $userIp [" . $session->getId() . "]";
-        
+
         $resp .= "</body></html>";
-        
+
         return new Response($resp);
     }
 
     /**
-     * @Route("/testdoc")
+     * @Route("/testdoc", name="testdoc")
      */
     public function docAction() {
         // often used after processing a form...etc
         $msg = "FlashMessage: you can see the documentation from the link below<br>";
         $msg .= "<a href='http://symfony.com/doc' target='_blank'>Symfony Docs</a><br>";
         $this->addFlash('notice', $msg);
-        
-        return $this->redirectToRoute("homepage");
 
+        return $this->redirectToRoute("homepage");
     }
 
+    /**
+     * @Route("/newproduct", name="newproduct")
+     */
+    public function genproductAction() {
+        $product = new Product();
+        $product->setName('A Foo Bar');
+        $product->setPrice(rand(5, 150));
+        $product->setDescription('Errar umanum est '. date("Y-m-d H:m:s"));
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($product);
+        $em->flush();
+
+        return new Response('Created product id ' . $product->getId());
+    }
+
+    /**
+     * @Route("/listproducts", name="listproducts")
+     */
+    public function listproductsAction() {
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Product');
+        
+        $products = $repository->findAll();
+        return new Response('<div class="jumbotron">'.
+                dump($products) . '</div>');
+        
+    }
 }

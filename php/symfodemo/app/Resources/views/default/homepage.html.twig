@@ -55,12 +55,22 @@
         </div>
     </div>
 
-        <!-- Test loops -->
-    {% for i in 0..5 %}
-        <div class="{{ cycle(['success', 'info'], i) }}">
-            Test twig loops  {{i}}<!-- some HTML here -->
+    <div class="row">
+        <div class="col-md-6 pull-left">
+            <a href="{{ path('testdoc') }}" target="_blank">Symphony Docs</a><br>
+            <a href="{{ path('newproduct') }}" target="_blank">Doctrine2: Generate product</a><br>
+            <a href="{{ path('listproducts') }}" target="_blank">Doctrine2: List products</a><br>
+
         </div>
-    {% endfor %}
+        <div class="col-md-4">
+            <!-- Test loops -->
+            {% for i in 0..3 %}
+                <div class="{{ cycle(['success', 'info'], i) }}">
+                    Test twig loops  {{i}}<!-- some HTML here -->
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
 
 {% endblock %}
