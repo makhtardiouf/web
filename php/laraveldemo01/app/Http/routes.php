@@ -9,7 +9,7 @@
   | It's a breeze. Simply tell Laravel the URIs it should respond to
   | and give it the controller to call when that URI is requested.
  *  See http://laravel.com/docs/5.1/routing
-  | $Id$
+  | $Id: routes.php, 6bca5116b68d  makhtar $
  * use Closure to handle "routing" in small applications; 
  * and Controllers in large applications
  */

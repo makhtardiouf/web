@@ -58,3 +58,4 @@ terminal.
 > If you're using PHP 5.3, configure your web server to point at the `web/`
 > directory of the project. For more details, see:
 > http://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
+2015. 09. 24. (목) 18:19:59 KST
