@@ -1,30 +1,33 @@
 <?php
+
 // php artisan make:controller PagesController  --plain
 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 
-class PagesController extends Controller
-{
-     public function home()
-    {
+class PagesController extends Controller {
+
+    public function home() {
+
+      //  Cache::store('file')->put('HelloLara', 'test', rand(10, 100));
+      //  $users = DB::select('select * from users where id = :id', ['id' => 1]);
+
         return view('welcome');
     }
 
-    
-    // Unneeded defaults...
-    
+    // defaults...
+
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
-    {
+    public function index() {
         home();
     }
 
@@ -33,9 +36,9 @@ class PagesController extends Controller
      *
      * @return Response
      */
-    public function about()
-    {
-         return view('about');
+    public function about() {
+
+        return view('about', ['info' => "Get back to it. Path: "]); //view()->getPath())]);
     }
 
     /**
@@ -44,11 +47,9 @@ class PagesController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function contact(Request $request)
-    {
-        session_start();
-        $_SESSION['CLIENT_IPS'] = $request->ips();
-         return view('contact');
+    public function contact(Request $request) {
+        
+        return view('contact', ['data' => $request->ips()]);
     }
 
     /**
@@ -57,8 +58,7 @@ class PagesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -68,10 +68,8 @@ class PagesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
-    
 }

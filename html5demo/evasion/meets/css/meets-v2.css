@@ -1,0 +1,121 @@
+/* 
+    Created on : Aug 13, 2015, 10:04:04 AM
+    Author     : Makhtar
+    Partly adapated from http://www.evasion.co.kr/data/css/common_font.css?r=7729
+
+*/
+@charset "utf-8";
+
+@font-face { font-family:'NanumGothicWeb'; font-style:normal; font-weight:400; src: url('/font/NanumGothicCompact.woff') format('woff');}
+@font-face { font-family:'NanumGothicWebBold'; font-style:normal; font-weight:400; src: url('/font/NanumGothic-Bold.woff') format('woff');}
+
+body{
+     font:13px 'NanumGothicWeb','나눔고딕','NanumGothic','굴림', Gulim, sans-serif;
+     background-image: url(http://image.evasion.co.kr/data/meets/evasionmeets_e02_img03.jpg), 
+         url(http://image.evasion.co.kr/data/meets/evasionmeets_e02_img05.jpg),
+         url(http://image.evasion.co.kr/data/meets/evasionmeets_e02_img07.jpg);
+     //background-image: url(http://image.evasion.co.kr/data/meets/evasionmeets_e02_img05.jpg);      
+     background-position: left center, center center, left bottom;
+     background-repeat: no-repeat;    
+}
+
+#banner{      
+    display: none;
+}        
+
+#mainnavbar {
+    font-size: 13px;
+    color: #fffffc;
+}
+
+.nav {padding: 0;margin: 0;}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    color: #fff;
+    background-color:#292929;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0 !important;
+}
+
+.navbar .navbar-collapse {
+    color: #fff;
+    background-color:#292929;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 0 !important;
+}
+
+.navbar .navbar-inverse {
+    background-color:#292929;
+    border-radius: 0 !important;
+}
+
+.nav > li{
+    float:none;
+    display:inline-block;
+    padding-left:0;
+    padding-right:0;
+}
+
+ul.nav a { color: #fffffc !important; }
+ul.nav a:hover { color: #33cccc !important; }
+ul.nav .active{color: #33cccc !important;}
+ul.nav .bar { color: grey !important;}
+a:hover { color: #33cccc !important; }
+.account:hover {color:#33cccc;}
+
+#banner{display: none;}
+
+#footer_rwd {
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    padding-bottom:20px;
+    color: lightgrey;
+    background-color: #292929; //#303030;
+    background-image: url(../img/footer_bg.jpg);
+    background-repeat: repeat;
+}
+
+#footer_rwd a {color: lightgrey;}
+
+#footer_rwd h6 {color: #fff;}
+
+#footer_rwd .row {padding: 5px;}
+
+#footer_rwd hr {
+    margin: 0.1em 0;
+    border: 0;
+    width: 100%;
+    height: 2px;
+    background: url(../img/f_line5.jpg);
+}
+
+#qaCarousel {
+    margin-left: 30px; 
+    margin-right: 30px; 
+
+}
+
+.carousel-control {
+    top: 50%;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background: none;
+    color: @red;
+    border: none;
+}
+.carousel-control.left {margin-left: -45px; color: black;}
+.carousel-control.right {margin-right: -45px; color: black;}
+
+
+.header_wrap {background:#000000;padding: 20px;}
+
+.search_inputbox {color:#666666; width:250px; height:28px; padding-left:8px; border:1px solid #bbbbbb;}
+
+.search_submit {line-height:50px; height:28px; width:30px; background:url(../img/search_icon.png) no-repeat;
+                cursor:pointer; outline:none; border:none; position:absolute; top:12px; right:-2px;}

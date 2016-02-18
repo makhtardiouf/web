@@ -1,48 +1,57 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('master')
+@section('title', 'About Laravel')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+<style>
+    .title {
+        font-size: 96px;
+        text-align: center;
+        display: inline-block;
+    }
+</style>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('content')
+    <div class="title">About Laravel 5</div>
+    <p>Tell me more about it:
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+@unless (Auth::check())
+    you are not signed in.
+@endunless
+</p> 
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+<?php 
+// Can use php echo or braces to have access to vars passed to the view
+echo date("Y-m-d")."<br>"; 
+echo "Glob data: $globalData <br>"; 
+$data = "random data " . md5(rand(0,50));
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
+// Braces give access to php functions too
+?>
+UNIX timestamp is: {{ time() }}
 
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">About Laravel 5</div>
-                
-                Tell me more about it
+{{ $info or 'Default' }}  = Equals =
+{{ isset($info) ? $info : 'Default' }}<br>
 
-            </div>
-        </div>
-    </body>
-</html>
+{{-- To escape from filtering through PHP's htmlentities function --}}
+Hello, {!! $data !!}.<br>
+
+@if (count($data) === 1)
+    I have one record!
+@elseif (count($data) > 1)
+    I have multiple records!
+@else
+    I don't have any records!
+@endif
+
+The current value of "$i":
+@for ($i = 0; $i < 10; $i++)
+     {{ $i }},
+@endfor
+
+{{-- $users  = ( {{$users or array()}} ) --}}
+
+{{--@foreach ($users as $user)
+    <p>This is user {{ $user->id }}</p>
+@endforeach--}}
+
+@endsection
+

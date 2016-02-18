@@ -9,26 +9,24 @@
   | It's a breeze. Simply tell Laravel the URIs it should respond to
   | and give it the controller to call when that URI is requested.
  *  See http://laravel.com/docs/5.1/routing
-  | $Id: routes.php, 6bca5116b68d  makhtar $
+  | $Id: routes.php, 50af58a93c18  makhtar $
  * use Closure to handle "routing" in small applications; 
  * and Controllers in large applications
  */
 
+
 Route::get('/', 'PagesController@home');
 // or with closure
 /*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+  Route::get('/', function () {
+  return view('welcome');
+  });
+ */
 
-Route::get('/about', 'PagesController@about');
+// provides session state and CSRF protection to routes defined here
+//// Route::group(['middleware' => ['web']], function () {
+
 Route::get('/contact', 'PagesController@contact');
-
-Route::get('tesme',  ['middleware' => 'testme', function() {
-
-    echo "Testing then...";
-}]);
 
 Route::get('users', function() {
     $users = User::all();
@@ -49,3 +47,14 @@ Route::get('user/{name?}', function ($name = 'demo user') {
 Route::get('user/{id}/{name}', function ($id, $name) {
     //
 })->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
+////});
+// ... Route::post('', '');
+Route::get('/about', 'PagesController@about');
+
+Route::get('/testme', ['middleware' => 'testme', function() {
+
+        echo "Testing then...";
+    }]);
+
+Route::resource('photo', 'PhotoController',
+                ['except' => ['update', 'destroy']]);
