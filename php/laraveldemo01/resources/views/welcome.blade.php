@@ -8,6 +8,6 @@
 </div>
 
 <p>
-<blockquote>{{ Inspiring::quote() }}</blockquote>
+    <blockquote>{{ Inspiring::quote() }}</blockquote>
 </p>
 @endsection

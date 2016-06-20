@@ -1,6 +1,6 @@
 <?php
 // Author: Makhtar Diouf <makhtar.diouf@gmail.com>
-// $Id: index.php, 6bca5116b68d  makhtar $
+// $Id: index.php, c5d6d52ac2d1  makhtar $
 require_once __DIR__ . '/WebPage.php';
 
 $page = new WebPage("CRUD operations with Propel2");

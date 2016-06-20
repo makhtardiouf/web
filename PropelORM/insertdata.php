@@ -1,9 +1,6 @@
 <?php
-
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Makhtar - Propel demo
  */
 
 try {
@@ -24,7 +21,7 @@ try {
     echo "\nAdded publisher: " . $publi->__toString();
 
     $book = new Book();
-    $book->setTitle("The beginning of Makhtar's come back, inchaAllah");
+    $book->setTitle("The way forward, inchaAllah");
     $book->setISBN(md5(rand()));
     $book->setAuthor($author);
     $book->setPublisher($publi);

@@ -1,6 +1,6 @@
 <?php
 // Author: Makhtar Diouf <makhtar.diouf@gmail.com>
-// $Id: authors.php, 6bca5116b68d  makhtar $
+// $Id: authors.php, c5d6d52ac2d1  makhtar $
 require_once __DIR__ . '/WebPage.php';
 
 $page = new WebPage("List of authors");
