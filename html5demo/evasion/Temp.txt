@@ -1,0 +1,1 @@
+aws s3 sync meets s3://eva-img-sin/meets --exclude 02-v2.html
