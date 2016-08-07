@@ -1,15 +1,36 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * Demo: if there's an unhandled error event it will crash our application...
+ * Demo node events: 
+ * if there's an unhandled error event it will crash the app...
+ * Makhtar
  */
+console.log("Running from " + process.cwd() + "...\n");
 
-
+const util = require('util');
 var EventEmitter = require('events').EventEmitter;
+var txer = new EventEmitter();
+var nEvents = 0;
 
-var emitter = new EventEmitter();
+function evHandler(a, b) {
+      console.log("\nReceived event with params: " + a + " " + b);
+      nEvents++;
+};
 
-emitter.on('error', function(err) {
-  console.error('Caught err:' + err.message);
+txer.on('newListener', function(ev, rxer) {
+  console.log("New event listener added: " + ev.eventName + " " + rxer)
+  nEvents++;
+  });
+  
+txer.on('event', evHandler);
+// Alias to:
+//txer.addListener('event', evHandler);
+
+txer.on('error', function(err) {
+  console.error('Caught Test error: ' + err.message);
+  nEvents++;
 });
 
-emitter.emit('error', new Error('Test: something bad happened'));
+txer.emit('event', 10, 15);
+txer.emit('error', new Error('something bad happened'));
+
+process.on('exit', function(){console.log(nEvents + " events caught by the handlers")});
+console.log("Mem usage: " + util.inspect(process.memoryUsage()));
