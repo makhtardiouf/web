@@ -34,12 +34,13 @@ evTxer.on('error', function(err) {
 try {
     evTxer.emit('testFunc', 10, 15);
     evTxer.emit('error', new Error('something bad happened'));
+    console.log("Registered events: " + evTxer.eventNames());
 
     process.on('exit', function() {
         console.log(nEvents + " events caught by the handlers")
     });
     console.log("Mem usage: " + util.inspect(process.memoryUsage()));
-    
+
 } catch (err) {
     console.log(err);
 }
