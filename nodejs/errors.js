@@ -12,12 +12,9 @@ function TestBadVar() {
     try {
         const m = 1;
         const n = m + z; //  z is undefined
-
     } catch (err) {
-
-        console.log("Caught error: " + err.message);
+        console.error("Caught error: " + err.message);
     }
-
 }
 
 

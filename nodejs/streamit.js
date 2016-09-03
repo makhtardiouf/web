@@ -1,5 +1,5 @@
 /*
- Makhtar Diouf <makhtar.diouf@gmail.com>
+ Makhtar Diouf 
  File operations nodejs demo. Run on cli as: node streamit
  Streams: abstract interface for asynchronously manipulating a continuous flow of data; similar to Unix pipes
  Ref: https://www.airpair.com/javascript/node-js-tutorial

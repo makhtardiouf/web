@@ -20,6 +20,9 @@ AccountModel.create = function(params, callback) {
         type: "username",
         uid: userDoc.uid
     };
+    
+    console.log("\nUsing DB: " + db.name + "\n");
+
     db.insert("username::" + userDoc.username, referenceDoc, function(error) {
         if(error) {
             callback(error, null);
