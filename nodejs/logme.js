@@ -3,13 +3,24 @@
  */
 
 var fs = require("fs");
-var output = fs.createWriteStream('./stdout.log');
-var errorOutput = fs.createWriteStream('./stderr.log');
+var outp = fs.createWriteStream('./stdout.log');
+var errOut = fs.createWriteStream('./stderr.log');
+var logger = new console.Console(outp, errOut);
 
-var logger = new console.Console(output, errorOutput);
+logIt("Running module:", require.main.filename, "\nsee log files: stdout.log", errOut.filename);
 // use it like console
 var count = 5;
-logger.log(process.uptime() + 'count: %d', count);
+logIt("Updtime", process.uptime() + " Count:", count);
 
 // Print stack trace
-console.trace("Stack:");
+//console.trace("Stack:");
+
+// With variable number of args
+function logIt() {
+    var msg = "";
+    for (var i=0; i < arguments.length; i++)
+        msg += arguments[i] + " ";
+
+    console.log(msg);
+    logger.log(msg);
+}
