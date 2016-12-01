@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "name": "gameapi-nodejs",
   "version": "1.0.0",
   "description": "An example of using the NodeJS SDK for Couchbase to create a simple game server",
@@ -10,5 +11,31 @@
     "express": "^4.13.0",
     "node-forge": "^0.6.30",
     "uuid": "^2.0.1"
+=======
+  "name": "servegame",
+  "version": "1.0.0",
+  "description": "Simple game server: http://blog.couchbase.com/making-a-game-api-server-using-nodejs-revisited",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makhtardiouf/web/"
+  },
+  "keywords": [
+    "Node",
+    "and",
+    "Games"
+  ],
+  "author": "Makhtar Diouf",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "couchbase": "^2.2.2",
+    "express": "^4.14.0",
+    "node-forge": "^0.6.42",
+    "uuid": "^2.0.2"
+>>>>>>> Stashed changes
   }
 }

@@ -1,8 +1,13 @@
 {
     "couchbase": {
+<<<<<<< Updated upstream
         "server": "127.0.0.1:5984",
         "bucket": "servegame",
         "_username": "makhtar",
         "_password": "81MAKsan"
+=======
+        "server": "127.0.0.1:8091",
+        "bucket": "servegame"
+>>>>>>> Stashed changes
     }
 }
