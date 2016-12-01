@@ -109,3 +109,11 @@ $arr = array('one', 'two', 'three');
 foreach ($arr as $key => $value) {
     echo "Key: $key; Value: $value<br />\n";
 }
+
+echo 3 + "15%" + "$25\n";
+
+echo empty(false);
+
+
+echo 016 / 8;
+

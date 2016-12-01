@@ -6,7 +6,7 @@ function xrange($start, $limit, $step = 1)
 {
     if ($start < $limit) {
         if ($step <= 0) {
-            throw new LogicException('Step must be +ve');
+            throw new LogicException('Step must be positive');
         }
 
         for ($i = $start; $i <= $limit; $i += $step) {
@@ -14,8 +14,9 @@ function xrange($start, $limit, $step = 1)
             yield $i;
         }
     } else {
+        // Backward iteration
         if ($step >= 0) {
-            throw new LogicException('Step must be -ve');
+            throw new LogicException('Step must be negative');
         }
 
         for ($i = $start; $i >= $limit; $i += $step) {
@@ -24,8 +25,6 @@ function xrange($start, $limit, $step = 1)
         }
     }
 }
-
-echo "Running on " . $_SERVER['SERVER_SOFTWARE'] . '<br>';
 
 echo 'Single digit odd numbers from range():  ';
 $execTime = -microtime(true);
@@ -52,8 +51,6 @@ class MyObj
 
     public function __construct($size = 3)
     {
-     //   $this->store = array_pad($this->store, $size, 0);
-     //   echo 'Store has '.count($this->store).' items';
         echo 'Initialized '.__CLASS__." with $size items\n";
     }
 
@@ -62,7 +59,7 @@ class MyObj
         //for ($i = 0; $i < count($this->store); ++$i) {
         for ($i = 0; $i < 5; ++$i) {
             $store[$i] = rand($i, 1000);
-           
+
         }
          yield $store;
     }
@@ -70,6 +67,6 @@ class MyObj
 
 $obj = new MyObj(10);
 foreach ($obj->genVal() as $val) {
-    
+
     var_dump($val);
 }

@@ -24,11 +24,11 @@ session_start();
         <!-- Use bootstrap for fancy RWD -->
       <div class="container">
         <div class="jumbotron">
-            <h3>Getting back to business</h3>
+            <h3>Keep the code rolling</h3>
 
             <fieldset>
                 <caption>Fill your personal information</caption>
-                <form  enctype="multipart/form-data" action="php-intro01.php" method="post" name="infoform">
+                <form enctype="multipart/form-data" action="php-intro01.php" method="post" name="infoform">
                     <p>Prenom:
                         <br />
                         <input type="text" name="surname" maxlength="20"

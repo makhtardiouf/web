@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>PHP array</title></head>    
+        <title>PHP array</title></head>
     <body>
         <?php
         $cars = array(
@@ -14,12 +14,13 @@
         );
 
         echo '<table border="1" margin="10">';
- 
+
         for ($i = 0; $i < sizeof($cars); $i++) {
             if ($i % 2 == 1)
                 echo '<tr bgcolor="pink">';
             else
                 echo '<tr bgcolor="green">';
+
             for ($j = 0; $j < sizeof($cars[$i]); $j++) {
                 echo "<td>" . $cars[$i][$j] . "</td>";
             }
@@ -27,6 +28,7 @@
         }
         echo '</table>';
         //  var_dump($cars);
+
         ?>
 
     </body>

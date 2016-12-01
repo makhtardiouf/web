@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 class PropertyTest
 {
-    /**  Location for overloaded data.  */
+    /**  Storage for overloaded data.  */
     private $data = array();
 
     /**  Overloading not used on declared properties.  */
@@ -13,7 +13,7 @@ class PropertyTest
 
     /**  Overloading only used on this when accessed outside the class.  */
     private $hiddenVar = 2;
-    
+
     public function __set($name, $value)
     {
         echo "Setting '$name' to '$value'\n";
@@ -36,7 +36,7 @@ class PropertyTest
         return null;
     }
 
-    
+
   /**  As of PHP 5.1.0  */
     public function __isset($name)
     {
@@ -56,7 +56,7 @@ class PropertyTest
     {
         return $this->hiddenVar;
     }
-    
+
     // method overloading
      public function __call($name, $arguments)
     {
@@ -64,7 +64,7 @@ class PropertyTest
         echo "Calling object method '$name' with args: "
              . implode(', ', $arguments). "\n";
     }
-    
+
 }
 
 
@@ -88,8 +88,6 @@ echo "Let's experiment with the private property named 'hidden':\n";
 echo "Privates are visible inside the class, so __get() not used...\n";
 
 echo $obj->getHidden() . "\n";
-echo "Privates not visible outside of class, so __get() is used...\n";
-echo $obj->hiddenVar . "\n";
 
 echo $obj->testOverload("overload 1");
 echo $obj->testOverload("overload 2", date("Y-m-d"));

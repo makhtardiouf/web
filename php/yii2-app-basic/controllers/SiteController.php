@@ -122,4 +122,10 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    // makhtar Tests
+    public function actionHello() {
+        return $this->render('info',
+                ['message' => "Hello, it's ". date("Y-m-d H:i:s")]);
+    }
 }

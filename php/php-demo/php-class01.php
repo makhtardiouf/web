@@ -15,26 +15,34 @@ class TestMe {
 
   function makeCoffee($types = array("cappuccino"), $coffeeMaker = NULL)
   {
-      $device = is_null($coffeeMaker) ? "hands" : $coffeeMaker;
+      $device = ($coffeeMaker? $coffeeMaker : "hands & joy");
       return "Making a cup of ".join(", ", $types)." with $device.\n";
   }
 
   // variable args PHP 5.6
   function sum(...$numbers) {
-      $acc = 0;
+      $tot = 0;
+      echo "Varargs sum of: ";
+
       foreach ($numbers as $n) {
-          $acc += $n;
+          $tot += $n;
+          echo "$n ";
       }
-      return $acc;
+      echo "= ";
+      return $tot;
   }
 
   // PHP <= 5.5
   function sumOldVarargs() {
-      $acc = 0;
+      $tot = 0;
+       echo "Sum of: ";
+
       foreach (func_get_args() as $n) {
-          $acc += $n;
+          $tot += $n;
+          echo "$n ";
       }
-      return $acc;
+      echo " with func_get_args = ";
+      return $tot;
   }
 
 }
