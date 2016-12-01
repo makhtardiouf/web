@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 var AccountModel = require("../models/accountmodel");
 var SessionModel = require("../models/sessionmodel");
 var StateModel = require("../models/statemodel");
@@ -133,7 +133,6 @@ var appRouter = function(app) {
     });
 
 };
-=======
 
 // http://blog.couchbase.com/making-a-game-api-server-using-nodejs-revisited
 
@@ -144,6 +143,5 @@ var appRouter = function(app) {
     });
 
 }
->>>>>>> Stashed changes
 
 module.exports = appRouter;

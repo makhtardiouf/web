@@ -1,17 +1,4 @@
 {
-<<<<<<< Updated upstream
-  "name": "gameapi-nodejs",
-  "version": "1.0.0",
-  "description": "An example of using the NodeJS SDK for Couchbase to create a simple game server",
-  "author": "Couchbase, Inc.",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.13.1",
-    "couchbase": "^2.0.8",
-    "express": "^4.13.0",
-    "node-forge": "^0.6.30",
-    "uuid": "^2.0.1"
-=======
   "name": "servegame",
   "version": "1.0.0",
   "description": "Simple game server: http://blog.couchbase.com/making-a-game-api-server-using-nodejs-revisited",
@@ -36,6 +23,5 @@
     "express": "^4.14.0",
     "node-forge": "^0.6.42",
     "uuid": "^2.0.2"
->>>>>>> Stashed changes
   }
 }
