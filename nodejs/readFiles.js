@@ -8,14 +8,9 @@ function readFiles(files, callback) {
     var processContent = function (filePath) {
         return function (err, data) {
             // an error was previously encountered and the callback was invoked
-            if (error !== null) {
-                return;
-            }
-
-            // an error happen while trying to read the file, so invoke the callback
             if (err) {
-                error = err;
-                return callback(err);
+                console.error(err.message);
+                return;
             }
 
             contents[filePath] = data;

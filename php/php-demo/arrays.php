@@ -11,13 +11,13 @@ var_dump(array_slice($arr, 1, 2));
         );
 
 for ($i = 0; $i < sizeof($cars); $i++) {
-            if ($i % 2)
-                echo '--------------------';
-            else
-                echo '********************';
+    if ($i % 2)
+        echo "\t--------------------\n";
+    else
+        echo "\t********************\n";
 
-            for ($j = 0; $j < sizeof($cars[$i]); $j++) {
-                echo "\t" . $cars[$i][$j] ;
-            }
-            echo "\n";
-        }
+    for ($j = 0; $j < sizeof($cars[$i]); $j++) {
+        echo "\t" . $cars[$i][$j] ;
+    }
+    echo "\n\n";
+}

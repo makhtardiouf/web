@@ -26,7 +26,7 @@
         function reloadTranspro() {
             console.log("Reloading...");
             try {
-                // $("#translats").load("https://www.trans-pro.net/");
+         
                 //.attr('src', "https://www.trans-pro.net/");
                 // $("#ctl00_MainContent_TransList1_GridView_transList")
                 var list = $("#translats").contents().find(".trans_td");
@@ -39,7 +39,7 @@
             } catch (e) {
                 console.log("Error: ", e.message);
             }
-            setTimeout(function () {  location.href = "transpro.html";}, 18000);
+            setTimeout(function () {  location.href = "traductions.html";}, 18000);
         }
 
         $.ajax({
