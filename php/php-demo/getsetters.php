@@ -1,17 +1,17 @@
 <?php
 // http://php.net/manual/en/language.oop5.overloading.php
 
-error_reporting(E_ALL);
+error_reporting(E_ERROR | E_WARNING);
 
 class PropertyTest
 {
-    /**  Storage for overloaded data.  */
+    /**  Storage for overloaded data. */
     private $data = array();
 
-    /**  Overloading not used on declared properties.  */
+    /**  Overloading not used on declared properties. */
     public $declared = 1;
 
-    /**  Overloading only used on this when accessed outside the class.  */
+    /**  Overloading only used on this when accessed outside the class. */
     private $hiddenVar = 2;
 
     public function __set($name, $value)
@@ -51,25 +51,23 @@ class PropertyTest
         unset($this->data[$name]);
     }
 
-    /**  Not a magic method, just here for example.  */
+    /**  Not a magic method, just here for example */
     public function getHidden()
     {
         return $this->hiddenVar;
     }
 
-    // method overloading
+    // method overloading used by testOverload
      public function __call($name, $arguments)
     {
         // Note: value of $name is case sensitive.
         echo "Calling object method '$name' with args: "
              . implode(', ', $arguments). "\n";
     }
-
 }
 
 
 echo "<pre>\n";
-
 $obj = new PropertyTest();
 
 // Create a property that is not declared in the class
@@ -91,6 +89,5 @@ echo $obj->getHidden() . "\n";
 
 echo $obj->testOverload("overload 1");
 echo $obj->testOverload("overload 2", date("Y-m-d"));
-
 
 ?>

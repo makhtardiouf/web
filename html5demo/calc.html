@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+Makhtar Diouf, demoing the basics
 -->
 <html>
-    <head>
-        <title>Calculate values dynamically</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <form action=""
-              oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-            0
-            <input type="range"  id="a" name="a" value="50">
-            100 +
-            <input type="number" id="b" name="b" value="50">
-            =
-            <output name="x" for="a b"></output>
-            <br><br>
-            <input type="submit">
-        </form>
+<head>
+    <title>HTML5 dynamic calculation demo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function sumup() {
+            x.value = parseInt(a.value) + parseInt(b.value);
+        }
+    </script>
+</head>
 
-    </body>
+<body onload="sumup();">
+    <form action="" oninput="sumup();">
+
+        0 <input type="range" id="a" name="a" value="50"> 100 +
+        <input type="number" id="b" name="b" value="50"> =
+        <output id="x" name="x" for="a b"></output>
+        <br><br>
+        <input type="submit">
+    </form>
+
+</body>
+
 </html>
