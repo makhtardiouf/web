@@ -1,67 +1,50 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta Access-Control-Allow-Origin </head>
+    <meta Access-Control-Allow-Origin />
+</head>
 
-    <body>
-        <h3>Translations gigs</h3>
-        <div class="row">
-            <div class="jumbotron col-md-8" id="newTrans">
+<body>
+    <h5>Translations gigs</h5>
 
-            </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!--<iframe id="translats" onload="reloadTranspro();" src="https://www.trans-pro.net/" style="min-width:1400px; min-height:800px;"></iframe>-->
+
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <iframe id="translats" onload="reloadTranspro();" src="https://www.trans-pro.net/" style="min-width:1224px; min-height:800px;"></iframe>
+    <div class="row">
+        <div class="jumbotron col-md-8" id="newTrans">
 
-</div>
-</div>
+        </div>
+    </div>
 
-<script type="text/javascript">
+    <script type="text/javascript">
         function reloadTranspro() {
             console.log("Reloading...");
             try {
-         
-                //.attr('src', "https://www.trans-pro.net/");
-                // $("#ctl00_MainContent_TransList1_GridView_transList")
-                var list = $("#translats").contents().find(".trans_td");
-                console.log("Translation items:", list.length);
 
-                for (var i = 0; i < list.length; i++) {
-                    $("#newTrans").append(list[i]);
-                }
-                // $(".contents").children();
+                // $("#ctl00_MainContent_TransList1_GridView_transList")
+                // var list = $("#translats").contents().find(".trans_td");
+                // console.log("Translation items:", list, list.length);
+
+            $("#newTrans").load("https://www.trans-pro.net/ #ctl00_MainContent_TransList1_GridView_transList");
+
             } catch (e) {
                 console.log("Error: ", e.message);
             }
-            setTimeout(function () {  location.href = "traductions.html";}, 18000);
+            setTimeout(function () { location.href = "traductions.html"; }, 18000);
         }
-
-        $.ajax({
-
-         //   url: 'https://www.trans-pro.net/"',
-            type: 'GET',
-            callback: '?',
-            //  datatype: 'application/json',
-            success: function () { reloadTranspro(); },
-            error: function () { console.log('Failed!'); },
-            headers: { "Access-Control-Allow-Origin": "*" }
-
-        });
 
         $(document).ready(function () {
 
             setTimeout(function () { reloadTranspro(); }, 5000000);
         });
-
     </script>
 
-
 </body>
-
 </html>

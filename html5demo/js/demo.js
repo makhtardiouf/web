@@ -1,12 +1,11 @@
-// JavaScript source code
-
-    // http://slides.html5rocks.com/
-
-    // Request Status
-    navigator.webkitTemporaryStorage.queryUsageAndQuota(function (used, remaining) {
-        console.log("Used quota: " + used + ", remaining quota: " + remaining);
-    }
-    );
+/* JavaScript source code
+    http://slides.html5rocks.com/
+*/
+// Request Status
+navigator.webkitTemporaryStorage.queryUsageAndQuota(function (used, remaining) {
+    console.log("Used quota: " + used + ", remaining quota: " + remaining);
+}
+);
 
 // Request Quota (only for File System API)
 navigator.webkitTemporaryStorage.requestQuota(webkitStorageInfo.PERSISTENT, function (used) {
