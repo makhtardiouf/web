@@ -1,0 +1,5 @@
+*~
+*.orig
+Code/node_modules/
+Code/app/bower_components/
+.hg

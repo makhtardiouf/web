@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mdApp" class="no-js"> 
+<head>
+<meta charset="utf-8">             
+<meta name="description" content="Demo Angular App">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Makhtar Diouf">       
+<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+<link rel="stylesheet" href="css/app.css">    
+<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<title>Demo Angular App - Makhtar Diouf</title>        
+</head>
+
+<body> 
+<!-- Top Header -->
+<div class="container header">               
+    <div class="jumbotron">
+        <h3>Demo Angular App</h3> 
+
+        <ul class="nav nav-pills pull-right">
+            <li><a href="#/index" class="active" onclick="setWideView();">Wide view</a></li>
+            <li><a  class="active" onclick="setCompactView();">Compact view</a></li>
+        </ul>                               
+    </div>                   
+    <progress id="pbar"></progress>
+</div>
+<!-- Main content -->
+<div class="view-container container" id="content">           
+    <div class="row"  data-ng-controller="itemListCtrl">                             
+        <div class="col-md-12" data-ng-view>
+            
+        </div>               
+    </div>
+    <!-- Footer -->
+    <div class="row footer">
+        <div class="col-md-12"> 
+            <p><i>By <a href="mailto:makhtar.diouf@gmail.com">Makhtar Diouf</a></i></p>
+            <p>Toolset: HTML5, Boostrap CSS 3.1, AngularJS 1.2, Google Charts</p>           
+        </div>                
+    </div>
+</div>
+<!-- $Id: index.html,v c6fb4f4a83aa 2016/11/19 07:15:20 makhtar $  -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/angular-google-chart/ng-google-chart.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/services.js"></script>
+</body>
+</html>

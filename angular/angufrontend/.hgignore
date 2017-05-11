@@ -1,0 +1,7 @@
+# use glob syntax.
+syntax: glob
+
+*~
+*.orig
+Code/node_modules/
+Code/app/bower_components/

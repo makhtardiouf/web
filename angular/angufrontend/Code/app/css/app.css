@@ -1,0 +1,93 @@
+/**
+ * app css stylesheet - Makhtar Diouf
+ * $Id$ 
+ */
+@import url("../bower_components/bootstrap/dist/css/bootstrap.min.css");
+
+ng-view {
+    min-height: 200px;
+}
+.nav a:hover {color:blue;}
+.nav a { color:black; background-color:lightgrey;}
+
+#title {font-size:20px; color: #fff;}
+
+.header .jumbotron {
+    color: #fff;
+    background-color:#150000;/* #690000;#292929; */   
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+.footer {
+    min-height: 140px;
+    color: #fff;
+    background-color:#150000;
+    padding-top: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+.footer a{ color: #fff;}
+
+.panelTitle {color:#336600; font-size:13px; font-weight: bold;}
+.panel {color:#2C2C2C; margin-top:20px; min-height: 50px; border-color: green; text-align: center;}
+.panel-body{font-size: 12px; min-height:200px;  /*background-color:#F9F8F3;*/}
+.metrics01 {min-width: 51px; min-height:57px; padding-left: 10px; background: url(../img/metrics01.jpg) no-repeat top; }
+.metrics02 {min-width: 51px; min-height:57px; padding-left: 10px; background: url(../img/metrics02.jpg) no-repeat top; }
+.metrics03 {min-width: 51px; min-height:57px; padding-left: 10px; background: url(../img/metrics03.jpg) no-repeat top; }
+.metrics04 {min-width: 51px; min-height:57px; padding-left: 10px; background: url(../img/metrics04.jpg) no-repeat top; }
+.metricTitle{margin-top:55px; font-size:10px;}
+
+th {   
+    text-align: center;
+    background-color:#FBFCFE;
+}
+td {
+    text-align: center;
+    vertical-align: central;
+}
+
+/* box-shadow: x y blur spread color; */
+
+.Pending .head {padding-left:45px; text-align: left; background: url(../img/pc-pending02.jpg) no-repeat left top; background-color:#F7F8FC; }
+.Complete .head {padding-left:45px; text-align: left; background: url(../img/pc-complete02.jpg) no-repeat left top; background-color:#F5F9F6; }
+.Running .head {padding-left:45px; text-align: left; background: url(../img/fw-running02.jpg) no-repeat left top; background-color:#F5F7FB; }
+.Accepted .head {padding-left:45px; text-align: left; background: url(../img/fw-accepted02.jpg) no-repeat left top; background-color:#F5F9F6; }
+.Rejected .head {padding-left:45px; text-align: left; background: url(../img/fw-rejected02.jpg) no-repeat left top;  background-color:#FDF2F2; }
+
+tr .Pending {
+    color: grey; 
+    vertical-align: central;  
+    background-color:#F7F8FC;    
+}
+
+tr .Complete {
+    color: #408140; 
+    background-color:#F5F9F6;
+}
+
+tr .Running {
+    color:  #31708f;
+    background-color:#F5F7FB;
+}
+
+tr .Accepted {
+    color: #408140; 
+    background-color:#F5F9F6;
+}
+
+tr .Rejected {
+    color: #a94442;  
+    background-color:#FDF2F2;
+}
+
+.fill-default {background-color:lightgrey; padding:10px; width:40px; height:30px; text-align: center; alignment-adjust: central;}
+.Complete .fill-default {background-color:#548039;}
+.Rejected .fill-default {background-color:#548039;}
+.result {font-size: 18px;}
+
+.box-shadow-4dp {
+    box-shadow: 0px 1px 5px 0 rgba(0, 1, 0, .24), 0 1px 10px 0 rgba(0, 1, 0, .2), 0 2px 4px -1px rgba(0, 1, 0, .52)
+}
+
+/*.panel {min-height: 20px; padding-bottom: 5px;}*/

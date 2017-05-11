@@ -1,0 +1,112 @@
+<!-- $Id: list.html,v 9c6c479709b6 2015/10/19 09:19:27 makhtar $  -->
+
+<h4>Firewall / Builds list</h4>
+
+<table class="table">
+    <tr style="background-color:#690000;">
+        <th>Changelist / Build</th><th>Owner</th><th>Time started</th>
+        <th>State</th><th>Metrics</th><th>Build</th>
+        <th>Unit Test</th><th>Functional Test</th>
+    </tr>
+
+    <tr data-ng-repeat="item in items| filter:query | orderBy:orderProp"
+        class="{{item.state}}" data-ng-click='showitem = !showitem' > <!-- data-ng-mouseleave="showitem = false" -->
+
+        <td data-ng-if="item.type === 'build'" class="{{item.state}} head">            
+            {{item.build_number}}        
+        </td>
+
+        <td data-ng-if="item.type === 'firewall'" class="{{item.state}} head">            
+            {{item.build_number}}
+            <div data-ng-show="showitem" data-ng-click='showpopup = !showpopup'  class="panel panel-default box-shadow-4dp">
+                <p class="panelTitle">Metrics</p>                
+                <div class="panel-body" data-toggle="modal" data-target="#detailView">
+                    <div class="row">
+                        <div class="col-sm-6 metrics01"><!--{{item.metrics.test}}--><p class="metricTitle">Test</p></div>
+                        <div class="col-sm-6 metrics02"><!--{{item.metrics.maintainability}}--><p class="metricTitle">Maintainability</p></div>
+                    </div>                      
+
+                    <div class="row">
+                        <div class="col-sm-6 metrics03"><!--{{item.metrics.security}}--><p class="metricTitle">Security</p></div>
+                        <div class="col-sm-6 metrics04"><!--{{item.metrics.workmanship}}--><p class="metricTitle">Workmanship</p></div>
+                    </div>   
+                </div>
+            </div>           
+        </td>
+
+        <td class="{{item.state}}" style="min-width:150px;">
+            {{item.owner}}
+            <div data-ng-show="showitem" class="panel panel-default box-shadow-4dp">
+
+                <p class="panelTitle">Build</p>                 
+                <div class="panel-body" data-toggle="modal" data-target="#detailView">
+                    <div class="row">
+                        <span><img src="img/debug01.jpg" width="54" height="80" alt="Debug"></span>
+                        <span><img src="img/release01.jpg" width="54" height="80" alt="Release"></span>  
+                    </div>
+                    <div class="row"><div class="col-md-12"></div></div>
+                    <div class="row">
+                        <div class="col-md-12"><br>{{item.build.datetime}}</div>                       
+                    </div>
+                </div>
+            </div>
+
+        </td>
+
+        <td class="{{item.state}}">{{item.start_time}}
+            <div data-ng-show="showitem" class="panel panel-default box-shadow-4dp">
+                <div data-ng-controller="UnitTestChartCtrl" class="panel-body">
+                    <p data-google-chart data-chart="unitTestChart" class="box-shadow-4dp" 
+                       data-ng-init="{{unitTestChart.data.rows = item.unit_test}}"></p>                   
+                    <p style="color:#444D3E; background-color:#C6DFB5;"><b>76%</b>
+                        <br><small style="color:black;">Code covered</small></p>
+                </div>
+            </div>
+        </td>
+
+        <td class="{{item.state}}">{{item.state}}
+            <div data-ng-show="showitem" class="panel panel-default box-shadow-4dp">
+                <div data-ng-controller="FuncTestChartCtrl" class="panel-body" >
+                    <p data-google-chart data-chart="funcTestChart" class="box-shadow-4dp" 
+                       data-ng-init="{{funcTestChart.data.rows = item.functional_test}}"></p>                   
+                    <p style="color:#560000; background-color:#F6CBAE;"><b>23%</b>
+                        <br><small style="color:black;">Code covered</small></p>
+                </div>
+            </div>
+        </td>
+
+        <td data-ng-show="showitem" class="{{item.state}}" colspan="4">    
+            <p class="panelTitle">_</p> <br>
+            <div class="panel-body">
+                <h4>Result:</h4>
+                <p class="{{item.state}} result">Change {{item.state}}<br>{{item.note}}</p>
+                <button type="button" class="btn btn-primary">
+                    <span data-ng-if="{{item.state == Rejected}}" class="glyphicon glyphicon-search"></span>
+                    {{item.action}}</button>
+            </div>
+        </td>
+
+        <td><div data-ng-if="!showitem" class="fill-default"></div></td>
+        <td><div data-ng-if="!showitem" class="fill-default"></div></td>
+        <td><div data-ng-if="!showitem" class="fill-default"></div></td>      
+        <td><div data-ng-if="!showitem" class="fill-default"></div></td>      
+    </tr>
+</table>                  
+
+<!-- Detail view pop-up -->
+<div id="detailView" class="modal fade" role="dialog" data-ng-show="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Detailed Metrics View</h4>
+            </div>
+            <div class="modal-body">
+                <p>This is a sample pop-up</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

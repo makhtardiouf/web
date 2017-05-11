@@ -1,0 +1,13 @@
+[paths]
+default = https://makhtardiouf@bitbucket.org/makhtardiouf/ablespecialist
+[extensions]
+keyword=
+[keyword]
+**.php = 
+**.twig = 
+**.html = 
+[keywordmaps]
+Author = {author|user}
+Date = {date|utcdate}
+Header = {root}/{file},v {node|short} {date|utcdate} {author|user}
+Id = {file|basename},v {node|short} {date|utcdate} {author|user}

@@ -1,0 +1,229 @@
+[
+    {
+        "id": 0,
+        "type": "build",
+        "owner": "_",
+        "build_number": "Tenrox-R1_1235",
+        "start_time": "_",
+        "state": "Pending",
+        "note": "_",
+        "metrics": {
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "unit_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 142}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 52}
+            ]}       
+        ],
+        "functional_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 4321}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 2145}
+            ]}       
+        ]
+    },
+    {
+        "id": 1,
+        "type": "firewall",
+        "owner": "jtuck",
+        "build_number": "432462",
+        "start_time": "4/18/2014 12:12pm",
+        "state": "Running",
+        "action": "Cancel",
+        "metrics": {
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build": {
+            "datetime": "52:46am 4/18/2014"
+        },
+        "unit_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 142}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 52}
+            ]}       
+        ],
+        "functional_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 4321}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 2145}
+            ]}       
+        ]
+    },
+    {
+        "id": 2,
+        "type": "firewall",
+        "owner": "samy",
+        "build_number": "432461",
+        "start_time": "4/18/2014 52:53am",
+        "state": "Rejected",
+        "note": "Metrics Reduction",
+        "action": "Find Issues",
+        "metrics": {
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build": {
+            "datetime":  "52:46am 4/17/2014"
+        },
+        "unit_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 142}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 52}
+            ]}       
+        ],
+        "functional_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 4321}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 2145}
+            ]}       
+        ]
+    },
+    {
+        "id": 3,
+        "type": "build",
+        "owner": "_",
+        "build_number": "Tenrox-R1_1234",
+        "start_time": "4/17/2014 9:42am",
+        "state": "Complete",
+        "note": "_",
+        "action": "Deploy",
+        "metrics": {
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },         
+        "unit_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 142}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 52}
+            ]}       
+        ],
+        "functional_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 4321}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 2145}
+            ]}       
+        ]
+    },
+    {
+        "id": 4,
+        "type": "firewall",
+        "owner": "samy",
+        "build_number": "432460",
+        "start_time": "4/17/2014 7:51am",
+        "state": "Rejected",
+        "note": "Metrics Reduction",
+        "action": "Find Issues",
+        "metrics": {
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build": {
+            "datetime":  "52:46am 4/18/2014"
+        },
+        "unit_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 142}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 52}
+            ]}       
+        ],
+        "functional_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 4321}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 2145}
+            ]}       
+        ]
+    },
+    {
+        "id": 5,
+        "type": "firewall",
+        "owner": "samy",
+        "build_number": "432459",
+        "start_time": "4/16/2014 6:43am",
+        "state": "Accepted",
+        "note": "Auto Merged",
+        "action": "Merge Build",
+        "metrics": {
+            "test": 64,
+            "maintainability": 53,
+            "security": 64,
+            "workmanship": 72
+        },
+        "build": {
+            "datetime":  "52:46am 4/18/2014"
+        },
+        "unit_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 142}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 52}
+            ]}       
+        ],
+        "functional_test": [
+            {"c": [
+            {"v": "Passed"},
+            {"v": 4321}
+            ]},
+            {"c": [
+            {"v": "failed"},
+            {"v": 2145}
+            ]}       
+        ]
+    }
+
+]
