@@ -9,7 +9,7 @@ Author: Makhtar Diouf<makhtar.diouf@gmail.com>
 and blended with the background color corresponding to the item's state. 
 - The jpg format is used to reduce file sizes.
 
-<img src="Code/app/img/index01.png" />
+[<img src="./Code/app/img/index01.png" />]
 
 
 ### Toolset
@@ -22,7 +22,7 @@ This application is built with:
 
 ### Prerequisites
 You must have `node.js` and its package manager `npm` installed.  
-They are available from [http://nodejs.org/](http://nodejs.org).
+They are available from [http://nodejs.org/].
 
 
 ### Installation
