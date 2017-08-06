@@ -8,7 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    Welcome to my Laravel demo app
+                    Laravel 5.4 お問い合わせフォーム
                 </div>
             </div>
              <blockquote>{{ Inspiring::quote() }}</blockquote>

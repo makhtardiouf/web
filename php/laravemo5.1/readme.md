@@ -1,3 +1,8 @@
+#Playground for Laravel 5.1 & Google Material design
+
+Makhtar Diouf
+
+
 ## Demo Laravel PHP Framework
 
 Run with   php -S localhost:9000 -t public/
