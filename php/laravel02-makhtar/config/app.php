@@ -227,6 +227,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
          'Inspiring' => Illuminate\Foundation\Inspiring::class,
 
+        'Helpers' => App\Helpers\Helpers::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Flash' => Laracasts\Flash\Flash::class,
     ],
 
 ];

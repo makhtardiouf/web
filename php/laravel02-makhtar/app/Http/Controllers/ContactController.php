@@ -27,7 +27,7 @@ class ContactController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('trim.input');
+      //  $this->middleware('trim.input');
     }
 
     /**

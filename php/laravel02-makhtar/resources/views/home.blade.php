@@ -5,11 +5,12 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">お問い合わせフォーム</div>
 
-                <div class="panel-body">
-                    Welcome to my Laravel demo app
-                    Laravel 5.4 お問い合わせフォーム
+                <div class="panel-body">                    
+                    <p>以下のボタンをご利用ください</p>
+
+                    <p><a href="/contacts/create" class="btn btn-primary">お問い合わせ</a></p>
                 </div>
             </div>
              <blockquote>{{ Inspiring::quote() }}</blockquote>

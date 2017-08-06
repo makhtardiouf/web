@@ -4,13 +4,10 @@
 @section('content')
 <div class="content">
   
-    <?php
-   // var_dump($data);
-     foreach ($data as $key => $value) {
-         echo "Client IP [$key]: " . $value . PHP_EOL;
-   
-    }
-    ?>
+  <div class="row">
+    <div class="col-xs-12"><a href="/contact/create" class="btn btn-primary">Create Contact</a></div>
+  </div>
 </div>
+
 
 @endsection
