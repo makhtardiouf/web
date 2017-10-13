@@ -9,14 +9,13 @@
  */
 var dbg = true;
 
-function firstNotRepeatingCharacter(s) {
+function firstNotRepeatingChar(s) {
     if (s.length <= 1)
         return s[0];
 
-    var target = '_';
-    var lastTgt = '_';
-    var sz = s.length;
+    var target = '_';        
     var nCount = {};
+    var sz = s.length;
 
     for(var i = 0; i < sz; i++) {
         var c = s[i];   
@@ -24,37 +23,24 @@ function firstNotRepeatingCharacter(s) {
         if(!nCount[c])
             nCount[c] = 1;
         else
-            nCount[c] += 1;
-       
-        if(nCount[c] == 1) {           
-            if (target == '_') {
-                target = c;                
-            } else if (lastTgt == '_')
-                lastTgt = c;
-
-            if(dbg)
-                console.log("Targets ", c, lastTgt);
-
-        } else if ( (nCount[c] > 1) && (target == c) ) {
-            if(nCount[lastTgt] == 1)
-                target = lastTgt;
-            else
-                target = '_';
-
-            if(dbg)
-                console.log("ReSet target ", c);
-        }
+            nCount[c] += 1;              
                
         if(dbg)
             console.log(c, " => ", nCount[c]);
     }
+    for (var e in nCount) {
+        if(nCount[e] == 1) {
+           target = e;
+           break;
+        }
+    }
          
     if(dbg)
-        console.log("\nAnswer: ", target, lastTgt);
+        console.log("\nAnswer: ", target);
 
     return target;    
 }
 
-//firstNotRepeatingCharacter("abacabad");
-//firstNotRepeatingCharacter("bcb");
-firstNotRepeatingCharacter("abcdefghijklmnopqrstuvwxyziflskecznslkjfabe");
+//firstNotRepeatingChar("abacabad");
+//firstNotRepeatingChar("bcb");
+firstNotRepeatingChar("abcdefghijklmnopqrstuvwxyziflskecznslkjfabe");
