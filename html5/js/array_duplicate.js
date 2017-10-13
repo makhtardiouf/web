@@ -26,16 +26,21 @@ function firstNotRepeatingCharacter(s) {
         else
             nCount[c] += 1;
        
-        if(nCount[c] == 1) {
-            lastTgt = c;
+        if(nCount[c] == 1) {           
             if (target == '_') {
                 target = c;                
-            }
+            } else if (lastTgt == '_')
+                lastTgt = c;
+
             if(dbg)
                 console.log("Targets ", c, lastTgt);
 
         } else if ( (nCount[c] > 1) && (target == c) ) {
-           // target = '_';
+            if(nCount[lastTgt] == 1)
+                target = lastTgt;
+            else
+                target = '_';
+
             if(dbg)
                 console.log("ReSet target ", c);
         }
@@ -45,12 +50,11 @@ function firstNotRepeatingCharacter(s) {
     }
          
     if(dbg)
-        console.log("\n\nAnswer: ", target);
-    if (target == '_') 
-        return lastTgt;
+        console.log("\nAnswer: ", target, lastTgt);
 
     return target;    
 }
 
 //firstNotRepeatingCharacter("abacabad");
-firstNotRepeatingCharacter("bcb");
+//firstNotRepeatingCharacter("bcb");
+firstNotRepeatingCharacter("abcdefghijklmnopqrstuvwxyziflskecznslkjfabe");
