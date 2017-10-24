@@ -26,7 +26,7 @@ function firstNotRepeatingChar(s) {
             nCount[c] += 1;              
                
         if(dbg)
-            console.log(c, " => ", nCount[c]);
+           ;// console.log(c, " => ", nCount[c]);
     }
     for (var e in nCount) {
         if(nCount[e] == 1) {
