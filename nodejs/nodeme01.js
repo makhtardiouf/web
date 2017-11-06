@@ -1,6 +1,6 @@
 
 /*
-Makhtar Diouf <makhtar.diouf@gmail.com>
+Makhtar Diouf
 Nodejs demo. Run on cli as: node nodeme01
 Ref: https://www.airpair.com/javascript/node-js-tutorial
 $Id$

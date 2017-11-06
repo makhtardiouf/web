@@ -27,7 +27,7 @@ function reverseInParentheses(inputStr) {
   console.log(sp, sp.length);
   console.log(sp[0].split("("));
 
-  // For count the number of inner parentheses
+  // Count the number of inner parentheses first
   for (var i = 0; i < str.length; i++) {
     if (str[i] == "(")
       pCnt++;

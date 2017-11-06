@@ -19,7 +19,9 @@ srv.on('request', function(req, resp) {
     });
 
     if (req.method === 'GET' && req.url === '/echo') {
+        console.log(util.inspect(req.headers));
         req.pipe(resp);
+        
     } else {
         //    resp.statusCode = 404;
         resp.write("Add /echo to the url to view back your input");

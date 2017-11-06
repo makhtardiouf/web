@@ -3,11 +3,11 @@
  * 
  * Given a string s, find and return the first instance 
  * of a non-repeating character in it. If there is no such character, return '_'.
- * Makhtar 
+ * Makhtar Diouf
  * @param {any} s 
- * @returns 
+ * @returns a char
  */
-var dbg = true;
+var dbg = false;
 
 function firstNotRepeatingChar(s) {
     if (s.length <= 1)
@@ -26,7 +26,7 @@ function firstNotRepeatingChar(s) {
             nCount[c] += 1;              
                
         if(dbg)
-           ;// console.log(c, " => ", nCount[c]);
+           console.log(c, " => ", nCount[c]);
     }
     for (var e in nCount) {
         if(nCount[e] == 1) {

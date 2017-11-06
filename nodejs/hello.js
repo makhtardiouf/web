@@ -1,4 +1,4 @@
-console.log("HELLO WORLD");
+console.log("HELLO NodeJS WORLD");
 
 
 function chart() {
@@ -12,5 +12,6 @@ function chart() {
     return "Here's your " + this.ctype + " chart!";
 }
 
-//var myBarChart = chart();
-console.log(chart().ctype);
+var c = chart();
+console.log(c);
+
