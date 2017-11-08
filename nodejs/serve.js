@@ -14,14 +14,6 @@ server.on('request', function (req, resp) {
             console.error("Request error: ", err.message);
         });
 
-        let body = [];
-        req.on('data', (chunk) => {
-            body.push(chunk);
-          }).on('end', () => {
-             body = Buffer.concat(body).toString();   
-             console.log(body);
-          });
-
         resp.on('error', function (err) {
             console.error("Response error: ", err.message);
         });
@@ -38,6 +30,15 @@ server.on('request', function (req, resp) {
         console.error("Server error:", e.message);
     }
 });
+
+server.on('error', (err) => {
+    console.error("Caught error: ", err.message);
+});
+
+server.on('close', () => {
+    console.info("Terminating server...");
+})
+
 
 // Node auto-sends default headers, so we can just write the body here
 

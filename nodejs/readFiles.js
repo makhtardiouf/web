@@ -41,6 +41,7 @@ function readFiles(err, files) {
             }
         });
     });
+
 }
 
 fs.readdir(__dirname, readFiles);
