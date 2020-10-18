@@ -2,18 +2,21 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">お問い合わせフォーム</div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="panel-body">                    
-                    <p>以下のボタンをご利用ください</p>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-                    <p><a href="/contacts/create" class="btn btn-primary">お問い合わせ</a></p>
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
-             <blockquote>{{ Inspiring::quote() }}</blockquote>
         </div>
     </div>
 </div>
