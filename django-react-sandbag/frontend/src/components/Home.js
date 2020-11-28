@@ -1,11 +1,20 @@
 import { React, Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import {
+    Container,
+    Nav, Navbar, NavDropdown,
+    Row, Col,
+    Button,
+    Form, FormControl
+} from "react-bootstrap";
 
 class Home extends Component {
     render() {
         return (
+           
+            <div>
             <Container>
-                <h4>Home</h4>
+                <h4>Welcome to Makhtar SaaS Web UI</h4>
+
                 <Row>
                     <Col md="6">
                         In this post, we will create a user interface in React for authentication (Signup and Login views).
@@ -13,6 +22,7 @@ class Home extends Component {
                     </Col>
                 </Row>
             </Container>
+            </div>
         );
     }
 }
