@@ -9,12 +9,14 @@ function Square(props) {
     );
 }
 
+// Build a board game with 9 squares where X and Os will be placed
 
 class Board extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             squares: Array(9).fill(null),
+            // X is set to default
             xIsNext: true,
         };
         console.log(this.state);
