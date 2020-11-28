@@ -6,10 +6,10 @@ import {
     Row,
     Col,
     Card,
-    Form,
-    FormControl
+    Form
 } from "react-bootstrap";
 
+import Username, {Password} from "../partials";
 
 class Signup extends Component {
     constructor(props) {
@@ -48,35 +48,17 @@ class Signup extends Component {
                             <Card.Body>
                                 <Card.Text>
                                     <Form>
-                                        <Form.Group controlId="userId">
-                                            <Form.Label>Username</Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                name="username"
-                                                placeholder="Enter username"
-                                                value={this.state.username}
-                                                onChange={this.onChange} />
-                                            <FormControl.Feedback type="invalid"></FormControl.Feedback>
-                                        </Form.Group>
-
-                                        <Form.Group controlId="passId">
-                                            <Form.Label>Password</Form.Label>
-                                            <FormControl
-                                                type="password"
-                                                name="password"
-                                                placeholder="Enter your password"
-                                                value={this.state.password}
-                                                onChange={this.onChange}
-                                            />
-                                            <FormControl.Feedback type="invalid"></FormControl.Feedback>
-                                        </Form.Group>
+                                        <Username onChange={this.onChange} />
+                                        <Password onChange={this.onChange} />
                                     </Form>
                                 </Card.Text>
                             </Card.Body>
 
-                            <Button color="success">Register</Button>
+                            <div className="ml-4">
+                                <Button variant="outline-success" size="sm" onClick={this.onRegisterClick}>Register</Button>
+                            </div>
                             <p className="mt-2">
-                                Already have account? <Link to="/login">Login</Link>
+                                Already have an account? <Link to="/login">Login</Link>
                             </p>
                         </Card>
                     </Col>

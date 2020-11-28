@@ -1,5 +1,7 @@
-import { React, Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React { Component } from "react";
+import Root from "./Root";
+import { Route, Switch } from "react-router-dom"; 
+
 import {
   Container,
   Nav, Navbar, NavDropdown,
@@ -43,7 +45,8 @@ class App extends Component {
           </Navbar>
         </Container>
 
-        <BrowserRouter>
+        {/* Replaces BrowserRouter */}
+        <Root>
           <Switch>
             <Route path="/signup" component={Signup}></Route>
             <Route path="/login" component={Login}></Route>
@@ -52,7 +55,7 @@ class App extends Component {
             <Route exact path="/" component={Home}></Route>
             <Route path="*" component={NotFound}></Route>
           </Switch>
-        </BrowserRouter>
+        </Root>
       </div>
     );
   }
