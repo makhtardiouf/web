@@ -1,4 +1,4 @@
-import React { Component } from "react";
+import { React, Component } from "react";
 import Root from "./Root";
 import { Route, Switch } from "react-router-dom"; 
 

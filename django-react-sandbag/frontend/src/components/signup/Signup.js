@@ -9,12 +9,13 @@ import {
     Form
 } from "react-bootstrap";
 
-import Username, {Password} from "../partials";
+import Username, {Email, Password} from "../partials";
 
 class Signup extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            email: "",
             username: "",
             password: ""
         }
@@ -30,6 +31,7 @@ class Signup extends Component {
 
     onRegisterClick(e) {
         const data = {
+            email: this.state.email,
             user: this.state.username,
             passwd: this.state.password
         };
@@ -48,6 +50,7 @@ class Signup extends Component {
                             <Card.Body>
                                 <Card.Text>
                                     <Form>
+                                        <Email onChange={this.onChange} />
                                         <Username onChange={this.onChange} />
                                         <Password onChange={this.onChange} />
                                     </Form>
@@ -57,9 +60,9 @@ class Signup extends Component {
                             <div className="ml-4">
                                 <Button variant="outline-success" size="sm" onClick={this.onRegisterClick}>Register</Button>
                             </div>
-                            <p className="mt-2">
+                            <div className="mt-2">
                                 Already have an account? <Link to="/login">Login</Link>
-                            </p>
+                            </div>
                         </Card>
                     </Col>
                 </Row>

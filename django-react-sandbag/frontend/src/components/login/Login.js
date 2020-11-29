@@ -58,9 +58,9 @@ class Login extends Component {
                             <div className="ml-4">
                                 <Button variant="outline-success" size="sm" onClick={this.onLoginClick}>Login</Button>
                             </div>
-                            <p className="mt-2">
+                            <div className="mt-2">
                                 Don't have an account? <Link to="/signup">Register</Link>
-                            </p>
+                            </div>
                         </Card>
                     </Col>
                 </Row>

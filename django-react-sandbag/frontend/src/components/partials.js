@@ -5,6 +5,23 @@ import {
 } from "react-bootstrap";
 
 // Reusable components accross files
+
+
+function Email(props) {
+    return (
+        <Form.Group controlId="emailId">
+            <Form.Label>Email</Form.Label>
+            <Form.Control
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={props.email}
+                onChange={props.onChange} />
+            <FormControl.Feedback type="invalid"></FormControl.Feedback>
+        </Form.Group>
+    );
+}
+
 function Username(props) {
     return (
         <Form.Group controlId="userId">
@@ -36,6 +53,7 @@ function Password(props) {
     );
 }
 
+
 // Ref https://www.geeksforgeeks.org/reactjs-importing-exporting/
 export default Username;
-export {Password};
+export {Email, Password};

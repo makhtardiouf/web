@@ -1,0 +1,4 @@
+{
+    "compile-hero.disable-compile-files-on-did-save-code": true,
+    "python.pythonPath": "D:\\Progs\\python-3.8.2-embed-win32\\python.exe"
+}

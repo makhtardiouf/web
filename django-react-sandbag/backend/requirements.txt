@@ -4,3 +4,4 @@ djangorestframework==3.11.2 # version compatible with Djoser
 markdown      
 django-filter  
 djoser
+social-auth-app-django
